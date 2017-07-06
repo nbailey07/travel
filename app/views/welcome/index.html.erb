@@ -1,0 +1,25 @@
+<h4><%= link_to 'Link to Params', param_path, class: 'navbar-brand' %></h4>
+<br>
+ <hr>
+ <br>
+<h1>Welcome to my Travel Site</h1>
+<p> This is my very awesome Travel Site. </p>
+
+<h3>This is my home country: <%= @homeland %></h3>
+</br>
+<h3> Countries I would like to visit</h3>
+<ul>
+	<% @countries.each do |country| %> 
+		<li><%= country %></li> 
+	<% end %>
+</ul>
+
+<%= image_tag 'bali.jpg', width: 400, class: 'img-responsive'%>
+ <br>
+ <hr>
+ <br>
+
+ <h3> A set of images of places I would like to visit:</h3>
+ <% @country_pics.each do |pic| %> 
+		<p><%= image_tag pic, width: 400, style: 'border-bottom: 25px', class: 'img-responsive'%></p> 
+	<% end %>

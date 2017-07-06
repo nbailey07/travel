@@ -1,0 +1,19 @@
+<style>
+  body {
+  	background: <%= @color %>;
+  }
+</style>
+<h4><%= link_to 'Link to index', index_path, class: 'navbar-brand' %></h4>
+<br>
+ <hr>
+ <br>
+<h1>My favorite color is <%= @color %>! </h1>
+
+<% if @size.to_i >= 12%>
+<h3> <p> My shoe size is <%= @size %>. I have HUGE feet!</h3>
+<% else %> 
+<h3> My shoe size is <%= @size %>!</h3>
+	<% end %> 
+<%= link_to "Blue", param_path(color: "blue"), class: "btn btn-primary" %>
+<%= link_to "Red", param_path(color: 'red'), class: "btn btn-danger" %>
+</h4><%= link_to 'Index', index_path, class: 'navbar-brand' %></h4>
